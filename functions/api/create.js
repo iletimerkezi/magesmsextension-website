@@ -38,7 +38,7 @@ export async function onRequestPost({request}) {
 }
 
 function parseSignupResponse(response) {
-  let falseFlag      = "Already member, if you forget password, try to recover."
+  let falseFlag      = "Bu cep telefonu numarası kullanımda, giriş yapmak için şifrenizi yenileyebilirsiniz."
   let errorContainer = [];
 
   for(const err in response.data?.error) {
@@ -71,7 +71,7 @@ function errorRsp(errors) {
 
 async function createAccount(form) {
 
-  return fetch('https://app.ilet.io/api/panel/signup', {
+  return fetch('https://www.iletimerkezi.com/new/panel/auth/signup', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
